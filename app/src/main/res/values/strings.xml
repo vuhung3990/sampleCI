@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sampe Login</string>
+    <string name="email_hint">example@email.com</string>
+    <string name="password">password (123456)</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login_success">Login Success</string>
+    <string name="invalid_email">invalid email format</string>
+    <string name="invalid_password">invalid password</string>
+</resources>
