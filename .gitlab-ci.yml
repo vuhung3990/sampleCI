@@ -4,16 +4,22 @@ stages:
 
 codeStyle:
   stage: check
+  tags:
+    - kotlin
   script:
     - ./gradlew detektCheck
 
 unitTests:
   stage: test
+  tags:
+      - test
   script:
     - ./gradlew test
 
 functionalTests:
   stage: test
+  tags:
+      - android
   script:
     - wget --quiet --output-document=android-wait-for-emulator https://raw.githubusercontent.com/travis-ci/travis-cookbooks/0f497eb71291b52a703143c5cd63a217c8766dc9/community-cookbooks/android-sdk/files/default/android-wait-for-emulator
     - chmod +x android-wait-for-emulator
