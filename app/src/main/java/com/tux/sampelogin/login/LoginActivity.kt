@@ -39,6 +39,10 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         }
     }
 
+    fun test() {
+        println("feature a")
+    }
+
     override fun loginSuccess() {
         startActivity(Intent(this, MainActivity::class.java))
     }
