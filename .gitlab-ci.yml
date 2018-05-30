@@ -1,16 +1,16 @@
 stages:
-  - check
-  - test
-
+  - code_static
+  - unit_test
+  - functional_test
 codeStyle:
-  stage: check
+  stage: code_static
   tags:
     - kotlin
   script:
     - ./gradlew detektCheck
 
 unitTests:
-  stage: test
+  stage: unit_test
   tags:
       - test
   script:
@@ -18,7 +18,7 @@ unitTests:
 
 # REQUIRED EMULATOR
 functionalTests:
-  stage: test
+  stage: functional_test
   tags:
       - android
   script:
